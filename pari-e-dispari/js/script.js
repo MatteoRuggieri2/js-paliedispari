@@ -8,19 +8,37 @@
 
 
 // chiedo all'utente se sceglie pari o dispari
-
+const userChoice = prompt('Cosa scegli? Pari o Dispari?');
 
 // chiedo all'utente che numero sceglie da 1 a 5
+const userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
 
+// il pc sceglie un numero da 1 a 5
+const pcNumber = casualNumber1To5()
+alert(`Il numero scelto dal computer è ${pcNumber}`);
 
 // sommo il numero dell'utente a quello del pc
+const somma = userNumber + pcNumber
 
+
+// Vedo se il numero è pari o dispari
+let evenOrOddResult = evenOrOdd(somma)
+
+if (evenOrOddResult) {
+    gameResult = 'pari';
+} else {
+    gameResult = 'dispari';
+}
 
 // dichiaro il vincitore
+if (userChoice === gameResult) {
+    alert(`E' ${gameResult}, hai vinto!`);
+} else {
+    alert(`E' ${gameResult}, hai perso!`);
+}
 
 
 
-let ciao = casualNumber1To5();
 
 // FUNCTION
 // creo una funzione per generare un numero casuale da 1 a 5
@@ -32,13 +50,6 @@ function casualNumber1To5() {
     return result;
 }
 
-
-
-let userNumber = 2;
-console.log(userNumber);
-
-let numberEvenOrOdd = evenOrOdd(userNumber);
-console.log(numberEvenOrOdd);
 
 // FUNCTION
 // creo una funzione che mi dice se il numero è pari o dispari, fornendomi un risultato booleano.
