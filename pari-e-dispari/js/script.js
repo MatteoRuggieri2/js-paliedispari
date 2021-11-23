@@ -57,7 +57,7 @@ function casualNumber1To5() {
 // result: 'true' se è pari oppure 'false' se è dispari
 function evenOrOdd(number) {
     let result = '';
-    if (number % 2 == 0) {
+    if (number % 2 === 0) {
         result = true
     } else {
         result = false
