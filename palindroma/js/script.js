@@ -7,7 +7,14 @@
 // Chiedo all'utente di inserire una parola
 let userWord = prompt(`Per vedere se una parola è polindroma inseriscila qui sotto e premi ok.`);
 let wordResult = palindromeWord(userWord);
-alert(wordResult);
+
+if (wordResult) {
+    alert('Questa parola è palindroma!');
+} else {
+    alert('Questa parola non è palindroma!');
+}
+
+
 
 
 // Creo la funzione che mi permette di capire se la parola è palindroma
@@ -30,10 +37,10 @@ function palindromeWord(word) {
 
 
     let result;
-    if (invertedWord === userWord) {
-        result = 'Questa parola è palindroma!'
+    if (invertedWord === word) {
+        result = true //'Questa parola è palindroma!'
     } else {
-        result = 'Questa parola non è palindroma!'
+        result = false //'Questa parola non è palindroma!'
     }
     
     return result;
